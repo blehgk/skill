@@ -1,0 +1,22 @@
+# Direct dependencies, pinned to the versions the embedded interpreter has.
+# Install with the bundled Python:
+#     .\python-embed\python.exe -m pip install -r requirements.txt
+
+# Inference (CPU only by design).
+onnxruntime==1.22.0
+numpy==2.3.1
+pillow==11.3.0
+
+# Capture. dxcam + comtypes are the Desktop Duplication backend and are
+# optional: without them the bot falls back to mss on its own.
+#     mss  ~5.0 ms per 298x298 frame  (~97 fps ceiling)
+#     dxcam ~0.03 ms per frame        (~188 fps ceiling)
+mss==10.0.0
+dxcam==0.3.0
+comtypes==1.4.17
+
+# Web UI.
+gradio==5.35.0
+
+# Progress bars in tools/.
+tqdm==4.67.1

@@ -1,0 +1,20 @@
+# Bundled Python runtime and generated artefacts are not project sources.
+python-embed/
+graphify-out/
+models/
+dataset/
+dataset_prediction/
+lightning_logs/
+_trace/
+__pycache__/
+*.pyc
+
+# Gradio caches every image it serves. app.py redirects it to the system temp
+# directory, but list it anyway so an accidental run from a stale environment
+# cannot commit ~2000 cache files.
+gradio/
+dbd-skillcheck/
+_probe_profile*/
+_chrome_profile*/
+_*profile*/
+shot_*.png
